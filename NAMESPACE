@@ -1,0 +1,9 @@
+export(ksi)
+export(data.frame.to.vectors)
+export(ksi.nodeset)
+export(ksi.group)
+
+S3method(print, ksi)
+S3method(summary, ksi)
+S3method(plot, ksi)
+

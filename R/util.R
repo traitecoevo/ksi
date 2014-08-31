@@ -61,7 +61,7 @@ classify.by.splits <- function(phy, nodes, group=NULL, base=NULL) {
       next
     
     depth <- max(group) + 1
-    i <- diversitree:::descendants.idx(node, edge, n.tip)
+    i <- diversitree:::descendants.idx.C(node, edge, n.tip)
     base[depth-1] <- if ( node == root ) 1 else group[edge[, 2] == node]
     group[i[group[i] == base[depth-1]]] <- depth
   }

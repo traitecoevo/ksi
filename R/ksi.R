@@ -22,6 +22,9 @@ ksi <- function(tree, dat, depth=10, test=NULL,
   } else {
     test <- match.arg(test, c("ks", "chisq"))
   }
+  if (is.null(tree$node.label) || any(duplicated(tree$node.label))) {
+    stop("Tree must have unique node labels")
+  }
 
   to.drop <- setdiff(tree$tip.label, names(dat))
   tree <- diversitree:::drop.tip.fixed(tree, to.drop)

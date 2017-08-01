@@ -1,5 +1,6 @@
 language: r
 latex: false
+dist: precise
 
 warnings_are_errors: false
 
@@ -10,4 +11,5 @@ notifications:
 
 install:
     - sudo apt-get install libgsl0-dev
+    - R -e 'install.packages("devtools")'
     - R -e 'devtools::install_deps(dep = T)'

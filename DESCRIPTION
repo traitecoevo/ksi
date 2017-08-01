@@ -4,7 +4,7 @@ Version: 0.1-2
 Date: 2017-08-01
 Author: Tempo and Mode in Plant Trait Evolution Working Group
 Maintainer: Will Cornwell <wcornwell@gmail.com>
-Depends: 
+Imports: 
      R (>= 2.14), 
      ape, 
      diversitree (>= 0.9-6)

@@ -3,8 +3,8 @@ ksi <- function(tree, dat, depth=10, test=NULL,
                 multicore=FALSE,
                 multicore.args=list()) {
   if ( multicore ) {
-    if ( !require("multicore") )
-      stop("The 'multicore' package is needed to use multicore=TRUE")
+    if ( !require("parallel") )
+      stop("The 'parallel' package is needed to use multicore=TRUE")
     loop <- set.defaults(mclapply, defaults=multicore.args)
   } else
     loop <- lapply

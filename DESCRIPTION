@@ -1,11 +1,13 @@
 Package: ksi
-Title: Komogorov-Smirnov Importance Statistic
-Version: 0.1-1
-Date: 2013-11-01
+Title: Phylogeny-based Komogorov-Smirnov Importance Statistic
+Version: 0.1-2
+Date: 2017-08-01
 Author: Tempo and Mode in Plant Trait Evolution Working Group
-Maintainer: Richard G. FitzJohn <rich.fitzjohn@gmail.com>
+Maintainer: Will Cornwell <wcornwell@gmail.com>
 Depends: R (>= 2.14), ape, diversitree (>= 0.9-6)
-Suggests: multicore
+Suggests: 
+     parallel, 
+     testthat
 ByteCompile: TRUE
-Description: Package underlying Cornwell et al. J. Ecology.
+Description: Package underlying Cornwell et al. 2014 J. Ecology.
 License: GPL (>=2)

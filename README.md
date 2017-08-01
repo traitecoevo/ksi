@@ -11,10 +11,10 @@ install.packages("devtools")
 Once devtools is installed, run
 
 ```
-library(devools)
-install_github("richfitz/ksi")
+library(devtools)
+install_github("traitecoevo/ksi")
 ```
 
 and the package will be installed.
 
-There is really only one function in the package: `ksi`.  See the help page `?ksi` for more information once installed and loaded.
+There is really only one useful function in the package: `ksi`.  See the help page `?ksi` for more information once installed and loaded.

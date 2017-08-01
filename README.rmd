@@ -34,10 +34,19 @@ The key thing to know is that node labels are essential for this process, so the
 
 ```{r example}
 library(ape)
+library(knitr)
 tree <- rtree(1000)
 tree$node.label <- paste0("nd", seq_len(tree$Nnode))
 vals <- setNames(runif(1000), tree$tip.label)
-output <- ksi(tree, vals, depth = 5)
+output <- ksi(tree, vals, depth = 2,verbose = FALSE)
+kable(summary(output))
 ```
 
+This output gives the two most distinctive clades for out made-up phylogeny.  Because of the nature of phylogenies, this returns the most distinctive single clade.    
+
+There is more statistical detail inside the returned object, as well as the data split in a useful way for easy visualization:
+
+```{r structure}
+str(output)
+```
 

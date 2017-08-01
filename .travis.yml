@@ -1,5 +1,4 @@
 language: r
-cache: packages
 latex: false
 
 warnings_are_errors: false
@@ -11,3 +10,4 @@ notifications:
 
 install:
     - sudo apt-get install libgsl0-dev
+    - R -e 'devtools::install_deps(dep = T)'

@@ -27,7 +27,9 @@ ksi <- function(tree, dat, depth=10, test=NULL,
   }
 
   to.drop <- setdiff(tree$tip.label, names(dat))
-  tree <- diversitree:::drop.tip.fixed(tree, to.drop)
+  if(!identical(sort(tree$tip.label), sort(names(dat)))){
+    tree <- diversitree:::drop.tip.fixed(tree, to.drop)
+  }
   possible <- tree$node.label
   dat <- dat[tree$tip.label]
 

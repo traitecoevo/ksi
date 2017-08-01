@@ -31,12 +31,12 @@ output <- ksi(tree, vals, depth = 2,verbose = FALSE)
 kable(summary(output))
 ```
 
-| node  |  rank|  statistic|  statistic.rel| nodesets                                                      |
-|:------|-----:|----------:|--------------:|:--------------------------------------------------------------|
-| nd145 |     1|   1.887620|      1.0000000| nd145; nd136; nd134; nd133; nd132; nd121; nd146; nd154; nd149 |
-| nd929 |     2|   1.724547|      0.9136093| nd929; nd927; nd926; nd925; nd937; nd938; nd939               |
+| node  |  rank|  statistic|  statistic.rel| nodesets                          |
+|:------|-----:|----------:|--------------:|:----------------------------------|
+| nd197 |     1|   1.977782|      1.0000000| nd197; nd196; nd195; nd198; nd199 |
+| nd904 |     2|   1.737567|      0.8785437| nd904; nd903; nd902; nd929; nd930 |
 
-This output gives the two most distinctive clades for out made-up phylogeny. Because of the nature of phylogenies, this returns the most distinctive single clade.
+This output gives the two most distinctive clades for out made-up phylogeny. Because of the nature of phylogenies, this returns the node from which the most distinctive single clade descendended, but also includes neighboring nodes which are very difficult to distinguish statistically.
 
 There is more statistical detail inside the returned object, as well as the data split in a useful way for easy visualization:
 
@@ -45,51 +45,51 @@ str(output)
 ```
 
     ## List of 2
-    ##  $ nd145:List of 4
-    ##   ..$ statistic: num 1.89
-    ##   ..$ p.value  : num 0.00161
-    ##   ..$ n        : int [1:2] 989 11
+    ##  $ nd197:List of 4
+    ##   ..$ statistic: num 1.98
+    ##   ..$ p.value  : num 0.000103
+    ##   ..$ n        : int [1:2] 994 6
     ##   ..$ fit      :List of 5
-    ##   .. ..$ statistic  : Named num 0.572
+    ##   .. ..$ statistic  : Named num 0.81
     ##   .. .. ..- attr(*, "names")= chr "D"
-    ##   .. ..$ p.value    : num 0.00161
+    ##   .. ..$ p.value    : num 0.000103
     ##   .. ..$ alternative: chr "two-sided"
     ##   .. ..$ method     : chr "Two-sample Kolmogorov-Smirnov test"
     ##   .. ..$ data.name  : chr "d.n and d.t"
     ##   .. ..- attr(*, "class")= chr "htest"
-    ##  $ nd929:List of 4
-    ##   ..$ statistic: num 1.72
-    ##   ..$ p.value  : num 0.00522
-    ##   ..$ n        : int [1:2] 971 18
+    ##  $ nd904:List of 4
+    ##   ..$ statistic: num 1.74
+    ##   ..$ p.value  : num 0.00477
+    ##   ..$ n        : int [1:2] 936 58
     ##   ..$ fit      :List of 5
-    ##   .. ..$ statistic  : Named num 0.41
+    ##   .. ..$ statistic  : Named num 0.235
     ##   .. .. ..- attr(*, "names")= chr "D"
-    ##   .. ..$ p.value    : num 0.00522
+    ##   .. ..$ p.value    : num 0.00477
     ##   .. ..$ alternative: chr "two-sided"
     ##   .. ..$ method     : chr "Two-sample Kolmogorov-Smirnov test"
     ##   .. ..$ data.name  : chr "d.n and d.t"
     ##   .. ..- attr(*, "class")= chr "htest"
     ##  - attr(*, "tree")=List of 5
-    ##   ..$ edge       : int [1:1998, 1:2] 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 ...
-    ##   ..$ tip.label  : chr [1:1000] "t603" "t509" "t501" "t812" ...
-    ##   ..$ edge.length: num [1:1998] 0.49 0.943 0.638 0.252 0.391 ...
+    ##   ..$ edge       : int [1:1998, 1:2] 1001 1002 1003 1004 1004 1003 1005 1006 1006 1007 ...
+    ##   ..$ tip.label  : chr [1:1000] "t921" "t220" "t594" "t723" ...
+    ##   ..$ edge.length: num [1:1998] 0.977 0.911 0.202 0.902 0.121 ...
     ##   ..$ Nnode      : int 999
     ##   ..$ node.label : chr [1:999] "nd1" "nd2" "nd3" "nd4" ...
     ##   ..- attr(*, "class")= chr "phylo"
     ##   ..- attr(*, "order")= chr "cladewise"
-    ##  - attr(*, "dat")= Named num [1:1000] 0.2363 0.0482 0.5596 0.9388 0.7891 ...
-    ##   ..- attr(*, "names")= chr [1:1000] "t603" "t509" "t501" "t812" ...
+    ##  - attr(*, "dat")= Named num [1:1000] 0.6338 0.3025 0.7538 0.1336 0.0945 ...
+    ##   ..- attr(*, "names")= chr [1:1000] "t921" "t220" "t594" "t723" ...
     ##  - attr(*, "contents")=List of 2
-    ##   ..$ nd145:List of 3
-    ##   .. ..$ neighbourhood: int [1:989] 1 2 3 4 5 6 7 8 9 10 ...
-    ##   .. ..$ target       : int [1:11] 138 139 140 141 142 143 144 145 146 147 ...
+    ##   ..$ nd197:List of 3
+    ##   .. ..$ neighbourhood: int [1:994] 1 2 3 4 5 6 7 8 9 10 ...
+    ##   .. ..$ target       : int [1:6] 190 191 192 193 194 195
     ##   .. ..$ other        : int(0) 
-    ##   ..$ nd929:List of 3
-    ##   .. ..$ neighbourhood: int [1:971] 1 2 3 4 5 6 7 8 9 10 ...
-    ##   .. ..$ target       : int [1:18] 927 928 929 930 931 932 933 934 935 936 ...
-    ##   .. ..$ other        : int [1:11] 138 139 140 141 142 143 144 145 146 147 ...
+    ##   ..$ nd904:List of 3
+    ##   .. ..$ neighbourhood: int [1:936] 1 2 3 4 5 6 7 8 9 10 ...
+    ##   .. ..$ target       : int [1:58] 902 903 904 905 906 907 908 909 910 911 ...
+    ##   .. ..$ other        : int [1:6] 190 191 192 193 194 195
     ##  - attr(*, "statistics")=List of 2
-    ##   ..$ nd145: num [1:999] 0 0.545 0.504 0.858 0.879 ...
-    ##   ..$ nd929: num [1:999] 0 0.572 0.454 0.659 0.676 ...
+    ##   ..$ nd197: num [1:999] 0 0.645 1.298 0.522 1.293 ...
+    ##   ..$ nd904: num [1:999] 0 0.661 1.322 0.526 1.316 ...
     ##  - attr(*, "test")= chr "ks"
     ##  - attr(*, "class")= chr "ksi"

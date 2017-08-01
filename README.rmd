@@ -42,7 +42,7 @@ output <- ksi(tree, vals, depth = 2,verbose = FALSE)
 kable(summary(output))
 ```
 
-This output gives the two most distinctive clades for out made-up phylogeny.  Because of the nature of phylogenies, this returns the most distinctive single clade.    
+This output gives the two most distinctive clades for out made-up phylogeny.  Because of the nature of phylogenies, this returns the node from which the most distinctive single clade descendended, but also includes neighboring nodes which are very difficult to distinguish statistically.    
 
 There is more statistical detail inside the returned object, as well as the data split in a useful way for easy visualization:
 

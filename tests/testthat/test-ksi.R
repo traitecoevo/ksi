@@ -2,6 +2,7 @@ context("ksi")
 
 ## checking that it runs
 test_that("returns normal", {
+  library(ape)
   tree <- rtree(1000)
   tree$node.label <- paste0("nd", seq_len(tree$Nnode))
   vals1 <- setNames(runif(1000), tree$tip.label)

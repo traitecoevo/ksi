@@ -11,7 +11,7 @@ The package can be installed using [devtools](https://github.com/hadley/devtools
 ``` r
 # install.packages("devtools") # uncomment this line if you don't have devtools installed
 library(devtools)
-#install_github("traitecoevo/ksi")
+install_github("traitecoevo/ksi")
 library(ksi)
 ```
 
@@ -30,8 +30,8 @@ output <- ksi(tree, vals, depth = 5)
 ```
 
     ## Using 'ks' tests
-    ## depth = 1...best node: 431 -- nd431
-    ## depth = 2...best node: 387 -- nd387
-    ## depth = 3...best node: 893 -- nd895
-    ## depth = 4...best node: 866 -- nd868
-    ## depth = 5...best node: 20 -- nd20
+    ## depth = 1...best node: 372 -- nd372
+    ## depth = 2...best node: 537 -- nd538
+    ## depth = 3...best node: 145 -- nd145
+    ## depth = 4...best node: 786 -- nd789
+    ## depth = 5...best node: 436 -- nd438

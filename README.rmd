@@ -22,7 +22,7 @@ The package can be installed using [devtools](https://github.com/hadley/devtools
 ```{r install, message=FALSE}
 # install.packages("devtools") # uncomment this line if you don't have devtools installed
 library(devtools)
-#install_github("traitecoevo/ksi")
+install_github("traitecoevo/ksi")
 library(ksi)
 ```
 

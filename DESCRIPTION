@@ -5,11 +5,11 @@ Date: 2017-08-01
 Author: Tempo and Mode in Plant Trait Evolution Working Group
 Maintainer: Will Cornwell <wcornwell@gmail.com>
 Imports: 
-     ape, 
-     diversitree (>= 0.9-6)
+  ape, 
+  diversitree (>= 0.9-6)
 Suggests: 
-     parallel, 
-     testthat
+  parallel, 
+  testthat
 ByteCompile: TRUE
 Description: Package underlying Cornwell et al. 2014 J. Ecology.
 License: GPL (>=2)

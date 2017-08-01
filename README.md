@@ -4,7 +4,7 @@ Finding Distinctive Clades with the Komogorov-Smirnov Importance Statistic
 
 [![Build Status](https://travis-ci.org/traitecoevo/ksi.svg?branch=master)](https://travis-ci.org/traitecoevo/ksi)
 
-This is the package that we used in [Cornwell et al 2014](10.1111/1365-2745.12208). The idea is to find clades that are a mix of large and unusual with respect to trait values. The weighting of largeness and unusualness is done via the classic Komogorov-Smirnov test statistic. All nodes on the tree are tested for "distinctiveness". This can be done iteratively as shown below.
+This is the package that we used in [Cornwell et al 2014](http://onlinelibrary.wiley.com/doi/10.1111/1365-2745.12208/abstract). The idea is to find clades that are a mix of large and unusual with respect to trait values. The weighting of largeness and unusualness is done via the classic Komogorov-Smirnov test statistic. All nodes on the tree are tested for "distinctiveness". This can be done iteratively as shown below.
 
 The package can be installed using [devtools](https://github.com/hadley/devtools), which itself can be installed from CRAN with
 
@@ -30,8 +30,8 @@ output <- ksi(tree, vals, depth = 5)
 ```
 
     ## Using 'ks' tests
-    ## depth = 1...best node: 372 -- nd372
-    ## depth = 2...best node: 537 -- nd538
-    ## depth = 3...best node: 145 -- nd145
-    ## depth = 4...best node: 786 -- nd789
-    ## depth = 5...best node: 436 -- nd438
+    ## depth = 1...best node: 586 -- nd586
+    ## depth = 2...best node: 984 -- nd985
+    ## depth = 3...best node: 889 -- nd890
+    ## depth = 4...best node: 509 -- nd509
+    ## depth = 5...best node: 551 -- nd552

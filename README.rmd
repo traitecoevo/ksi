@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [![Build Status](https://travis-ci.org/traitecoevo/ksi.svg?branch=master)](https://travis-ci.org/traitecoevo/ksi)
 
-This is the package that we used in [Cornwell et al 2014](10.1111/1365-2745.12208).  The idea is to find clades that are a mix of large and unusual with respect to trait values.  The weighting of largeness and unusualness is done via the classic Komogorov-Smirnov test statistic.  All nodes on the tree are tested for "distinctiveness".  This can be done iteratively as shown below.  
+This is the package that we used in [Cornwell et al 2014](http://onlinelibrary.wiley.com/doi/10.1111/1365-2745.12208/abstract).  The idea is to find clades that are a mix of large and unusual with respect to trait values.  The weighting of largeness and unusualness is done via the classic Komogorov-Smirnov test statistic.  All nodes on the tree are tested for "distinctiveness".  This can be done iteratively as shown below.  
 
 The package can be installed using [devtools](https://github.com/hadley/devtools), which itself can be installed from CRAN with
 

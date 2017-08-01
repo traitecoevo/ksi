@@ -5,7 +5,7 @@ ksi <- function(tree, dat, depth=10, test=NULL,
   if ( multicore ) {
     if ( !require("parallel") )
       stop("The 'parallel' package is needed to use multicore=TRUE")
-    loop <- set.defaults(mclapply, defaults=multicore.args)
+    loop <- diversitree::set.defaults(parallel::mclapply, defaults=multicore.args)
   } else
     loop <- lapply
 

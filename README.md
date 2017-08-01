@@ -1,4 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+### Finding Distinctive Clades with the Komogorov-Smirnov Importance Statistic
+
 This is the package that we used in [Cornwell et al 2014](10.1111/1365-2745.12208).
 
 The package can be installed using [devtools](https://github.com/hadley/devtools), which itself can be installed from CRAN with
@@ -24,8 +26,8 @@ output<-ksi(tree, vals, depth = 5)
 ```
 
     ## Using 'ks' tests
-    ## depth = 1...best node: 308 -- nd308
-    ## depth = 2...best node: 730 -- nd731
-    ## depth = 3...best node: 623 -- nd624
-    ## depth = 4...best node: 394 -- nd395
-    ## depth = 5...best node: 243 -- nd243
+    ## depth = 1...best node: 910 -- nd910
+    ## depth = 2...best node: 656 -- nd656
+    ## depth = 3...best node: 286 -- nd286
+    ## depth = 4...best node: 65 -- nd65
+    ## depth = 5...best node: 219 -- nd220

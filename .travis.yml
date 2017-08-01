@@ -2,8 +2,6 @@ language: r
 
 sudo: required
 
-
-
 cache: packages
 
 warnings_are_errors: false
@@ -13,5 +11,5 @@ notifications:
     on_success: change
     on_failure: change
 
-before_install:
-   ./travis-tool.sh aptget_install libgsl0-dev
+install:
+    - sudo apt-get install libgsl0-dev

@@ -11,6 +11,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Finding Distinctive Clades with the Komogorov-Smirnov Importance Statistic
+
 This is the package that we used in [Cornwell et al 2014](10.1111/1365-2745.12208).
 
 The package can be installed using [devtools](https://github.com/hadley/devtools), which itself can be installed from CRAN with

@@ -11,7 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Finding Distinctive Clades with the Komogorov-Smirnov Importance Statistic
+## Finding Distinctive Clades with the Komogorov-Smirnov Importance Statistic
+
+[![Build Status](https://travis-ci.org/traitecoevo/ksi.svg?branch=master)](https://travis-ci.org/traitecoevo/ksi)
 
 This is the package that we used in [Cornwell et al 2014](10.1111/1365-2745.12208).
 
@@ -34,7 +36,7 @@ The key thing to know is that node labels are essential for this process, so the
 tree <- rtree(1000)
 tree$node.label <- paste0("nd", seq_len(tree$Nnode))
 vals <- setNames(runif(1000), tree$tip.label)
-output<-ksi(tree, vals, depth = 5)
+output <- ksi(tree, vals, depth = 5)
 ```
 
 
